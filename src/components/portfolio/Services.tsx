@@ -6,22 +6,26 @@ const services = [
   {
     Icon: Code2,
     title: "Software Developr ",
-    description: "Full-stack web apps built with React, Next.js, and modern tooling — fast, accessible, scalable.",
+    description:
+      "Full-stack web apps built with React, Next.js, and modern tooling — fast, accessible, scalable.",
   },
   {
     Icon: Layers,
     title: "Design Systems Basic",
-    description: "Reusable component libraries and tokens that keep your product visually consistent at any scale.",
+    description:
+      "Reusable component libraries and tokens that keep your product visually consistent at any scale.",
   },
   {
     Icon: Sparkles,
     title: "Motion & Microinteractions",
-    description: "Tasteful animations that guide users, signal state, and make interfaces feel premium.",
+    description:
+      "Tasteful animations that guide users, signal state, and make interfaces feel premium.",
   },
   {
     Icon: Rocket,
     title: "MVP & Product Builds",
-    description: "Idea to production in weeks, not months. I help founders ship the right thing — and ship it well.",
+    description:
+      "Idea to production in weeks, not months. I help founders ship the right thing — and ship it well.",
   },
 ];
 
@@ -30,7 +34,11 @@ export function Services() {
     <Section
       id="services"
       eyebrow="What I do"
-      title={<>Services I <span className="text-gradient-accent">offer.</span></>}
+      title={
+        <>
+          Services I <span className="text-gradient-accent">offer.</span>
+        </>
+      }
       description="Hire me for end-to-end product work or focused engagements — whatever moves your team forward."
     >
       <div className="grid sm:grid-cols-2 gap-5">

@@ -34,9 +34,7 @@ export function Section({
             {title}
           </h2>
           {description && (
-            <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-              {description}
-            </p>
+            <p className="mt-4 text-muted-foreground text-lg leading-relaxed">{description}</p>
           )}
         </motion.div>
         {children}

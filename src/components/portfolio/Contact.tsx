@@ -16,7 +16,11 @@ export function Contact() {
     <Section
       id="contact"
       eyebrow="Get in touch"
-      title={<>Let's build <span className="text-gradient-accent">something great.</span></>}
+      title={
+        <>
+          Let's build <span className="text-gradient-accent">something great.</span>
+        </>
+      }
       description="Have a project in mind, or just want to say hi? My inbox is always open."
     >
       <div className="grid lg:grid-cols-5 gap-6">
@@ -30,16 +34,16 @@ export function Contact() {
           <div>
             <h3 className="font-display text-2xl font-semibold mb-3">Reach out</h3>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              I usually respond within 24 hours. For freelance inquiries, please
-              include a quick note about the project, timeline, and budget.
+              I usually respond within 24 hours. For freelance inquiries, please include a quick
+              note about the project, timeline, and budget.
             </p>
-              <a
-                href="mailto:vishalsahani158@gmail.com"
-                className="inline-flex items-center gap-3 text-foreground hover:text-primary transition-colors"
-              >
-                <Mail size={18} />
-                vishalsahani158@gmail.com
-              </a>
+            <a
+              href="mailto:vishalsahani158@gmail.com"
+              className="inline-flex items-center gap-3 text-foreground hover:text-primary transition-colors"
+            >
+              <Mail size={18} />
+              vishalsahani158@gmail.com
+            </a>
           </div>
 
           <div className="mt-8 pt-6 border-t border-white/5 flex gap-3">
@@ -53,6 +57,7 @@ export function Contact() {
                 href={href}
                 className="grid h-10 w-10 place-items-center rounded-full bg-white/[0.04] hover:bg-white/[0.08] hover:scale-110 transition-all"
               >
+                //fix now
                 <Icon size={16} />
               </a>
             ))}
@@ -73,7 +78,10 @@ export function Contact() {
           </div>
           <Field label="Subject" id="subject" placeholder="What's this about?" />
           <div>
-            <label htmlFor="message" className="text-xs uppercase tracking-widest text-muted-foreground mb-2 block">
+            <label
+              htmlFor="message"
+              className="text-xs uppercase tracking-widest text-muted-foreground mb-2 block"
+            >
               Message
             </label>
             <textarea
@@ -110,7 +118,10 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="text-xs uppercase tracking-widest text-muted-foreground mb-2 block">
+      <label
+        htmlFor={id}
+        className="text-xs uppercase tracking-widest text-muted-foreground mb-2 block"
+      >
         {label}
       </label>
       <input

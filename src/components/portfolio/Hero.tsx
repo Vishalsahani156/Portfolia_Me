@@ -2,7 +2,12 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
 
-const roles = ["MERN Stack Developer", "Full Stack Developer", "Software Developer", "Problem Solver"];
+const roles = [
+  "MERN Stack Developer",
+  "Full Stack Developer",
+  "Software Developer",
+  "Problem Solver",
+];
 
 export function Hero() {
   const [text, setText] = useState("");
@@ -22,9 +27,7 @@ export function Hero() {
         setRoleIdx((i) => (i + 1) % roles.length);
         return;
       }
-      setText(
-        deleting ? current.slice(0, text.length - 1) : current.slice(0, text.length + 1)
-      );
+      setText(deleting ? current.slice(0, text.length - 1) : current.slice(0, text.length + 1));
     }, speed);
     return () => clearTimeout(timeout);
   }, [text, deleting, roleIdx]);
@@ -33,7 +36,10 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
       <div className="absolute inset-0 grid-bg pointer-events-none" />
       <div className="absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-primary/20 blur-[120px] animate-float" />
-      <div className="absolute bottom-1/4 -right-32 h-96 w-96 rounded-full bg-accent/20 blur-[120px] animate-float" style={{ animationDelay: "2s" }} />
+      <div
+        className="absolute bottom-1/4 -right-32 h-96 w-96 rounded-full bg-accent/20 blur-[120px] animate-float"
+        style={{ animationDelay: "2s" }}
+      />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         <motion.div
@@ -73,7 +79,10 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-8 mx-auto max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed"
         >
-       I build fast, accessible, and well-designed web applications that turn ideas into real, usable products. I focus on writing clean, maintainable code and creating smooth user experiences. Currently, I’m working on improving my skills while building practical tools that solve real problems.
+          I build fast, accessible, and well-designed web applications that turn ideas into real,
+          usable products. I focus on writing clean, maintainable code and creating smooth user
+          experiences. Currently, I’m working on improving my skills while building practical tools
+          that solve real problems.
         </motion.p>
 
         <motion.div

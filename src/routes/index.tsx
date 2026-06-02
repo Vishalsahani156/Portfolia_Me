@@ -21,7 +21,8 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Vishal Sahani — MERN Stack Developer" },
       {
         property: "og:description",
-        content: "Portfolio showcasing modern web development with MongoDB, Express, React, and Node.js.",
+        content:
+          "Portfolio showcasing modern web development with MongoDB, Express, React, and Node.js.",
       },
     ],
   }),

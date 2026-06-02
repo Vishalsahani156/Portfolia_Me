@@ -21,7 +21,11 @@ export function Skills() {
     <Section
       id="skills"
       eyebrow="Tech stack"
-      title={<>Tools I reach for <span className="text-gradient-accent">every day.</span></>}
+      title={
+        <>
+          Tools I reach for <span className="text-gradient-accent">every day.</span>
+        </>
+      }
       description="A curated stack — chosen because it's fast, stable, and gets out of the way."
     >
       <div className="grid md:grid-cols-3 gap-5">

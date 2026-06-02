@@ -15,12 +15,12 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 function NotFoundComponent() {
   useEffect(() => {
     const sectionRedirects: Record<string, string> = {
-      '/about': '#about',
-      '/skills': '#skills',
-      '/projects': '#projects',
-      '/experience': '#experience',
-      '/services': '#services',
-      '/contact': '#contact',
+      "/about": "#about",
+      "/skills": "#skills",
+      "/projects": "#projects",
+      "/experience": "#experience",
+      "/services": "#services",
+      "/contact": "#contact",
     };
 
     const hash = sectionRedirects[window.location.pathname.toLowerCase()];

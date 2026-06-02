@@ -6,27 +6,30 @@ const timeline = [
     year: "2025 — Present",
     role: "MERN Stack Developer",
     company: "Mahahshankh Design and Technology",
-    description: "Building full-stack web applications with MongoDB, Express, React, and Node.js. Contributing to product features, API development, and responsive UI implementations.",
+    description:
+      "Building full-stack web applications with MongoDB, Express, React, and Node.js. Contributing to product features, API development, and responsive UI implementations.",
   },
   {
     year: "2024 — Now",
-role: "Junior Full Stack Developer",
-company: "Mahashankh Design and Technology",
-description: "Working on full-stack web applications and contributing to frontend and backend development. Building responsive UI components, integrating APIs, and continuously improving performance and code quality while gaining hands-on industry experience."
+    role: "Junior Full Stack Developer",
+    company: "Mahashankh Design and Technology",
+    description:
+      "Working on full-stack web applications and contributing to frontend and backend development. Building responsive UI components, integrating APIs, and continuously improving performance and code quality while gaining hands-on industry experience.",
   },
- {
-  year: "June 2025 — Now",
-  role: "Junior Full Stack Developer",
-  company: "Mahashankh Design and Technology",
-  description: "Working on full-stack web applications using React, TypeScript, and Node.js. Contributing to UI development, backend integration, and API handling while improving performance, code quality, and real-world project experience."
-},
   {
-  year: "2 Months (Internship)",
-  role: "Frontend Developer Intern",
-  company: "Binney Jewellery Pvt. Ltd.",
-  description: "Worked on frontend development tasks, building and improving UI components for web pages. Assisted in maintaining and updating the website while learning real-world development workflows and team collaboration."
-},
-  
+    year: "June 2025 — Now",
+    role: "Junior Full Stack Developer",
+    company: "Mahashankh Design and Technology",
+    description:
+      "Working on full-stack web applications using React, TypeScript, and Node.js. Contributing to UI development, backend integration, and API handling while improving performance, code quality, and real-world project experience.",
+  },
+  {
+    year: "2 Months (Internship)",
+    role: "Frontend Developer Intern",
+    company: "Binney Jewellery Pvt. Ltd.",
+    description:
+      "Worked on frontend development tasks, building and improving UI components for web pages. Assisted in maintaining and updating the website while learning real-world development workflows and team collaboration.",
+  },
 ];
 
 export function Experience() {
@@ -34,7 +37,11 @@ export function Experience() {
     <Section
       id="experience"
       eyebrow="Experience"
-      title={<>A short <span className="text-gradient-accent">timeline.</span></>}
+      title={
+        <>
+          A short <span className="text-gradient-accent">timeline.</span>
+        </>
+      }
     >
       <div className="relative">
         <div className="absolute left-3 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/15 to-transparent" />
@@ -50,7 +57,9 @@ export function Experience() {
                 i % 2 === 0 ? "" : "md:[direction:rtl]"
               }`}
             >
-              <div className={`absolute left-3 md:left-1/2 top-2 -translate-x-1/2 h-3 w-3 rounded-full bg-primary glow-ring`} />
+              <div
+                className={`absolute left-3 md:left-1/2 top-2 -translate-x-1/2 h-3 w-3 rounded-full bg-primary glow-ring`}
+              />
 
               <div className="pl-10 md:pl-0 md:pr-12 md:text-right [direction:ltr]">
                 <div className="text-xs uppercase tracking-widest text-primary mb-1">{t.year}</div>
