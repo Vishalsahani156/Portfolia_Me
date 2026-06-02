@@ -51,5 +51,5 @@ async function handler(req: Request) {
   }
 }
 
-export default handler;
-
+// Nitro's Vercel handler calls `default.fetch(req)` — same shape as @tanstack/react-start/server-entry.
+export default { fetch: handler };
