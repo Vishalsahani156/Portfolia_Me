@@ -1,0 +1,13 @@
+.git
+.gitignore
+README.md
+node_modules
+npm-debug.log
+.next
+.nuxt
+dist
+build
+coverage
+.env
+.env.local
+.env.*.local

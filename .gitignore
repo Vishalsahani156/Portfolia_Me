@@ -1,0 +1,53 @@
+# Dependencies
+node_modules
+
+# Build & framework output
+dist
+dist-ssr
+.vercel/output
+.output
+.vinxi
+.tanstack
+.nitro
+.vercel
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Local overrides
+*.local
+
+# Wrangler / Cloudflare
+.wrangler/
+
+# Test & tooling caches
+coverage
+*.tsbuildinfo
+.eslintcache
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.cursor
+
+# OS files
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
