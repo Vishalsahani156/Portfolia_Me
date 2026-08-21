@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Section } from "./Section";
 
 const stats = [
-  { value: "6+", label: "Month building" },
+  { value: "1+", label: "Years of experience" },
   { value: "10+", label: "Projects shipped" },
   { value: "2", label: "Happy clients" },
   { value: "∞", label: "Cups of coffee" },
@@ -35,13 +35,12 @@ export function About() {
             that feel simple and efficient to use—without unnecessary complexity.
           </p>
           <p>
-            I have 6 months of experience as a junior full-stack developer. I focus on learning
-            fast, building real-world projects, and improving my skills in React, TypeScript, and
-            backend development. I enjoy creating clean, responsive, and user-friendly applications.
-            I’m continuously improving my understanding of performance, accessibility, and best
-            practices to write better and more maintainable code. I’m currently growing my
-            experience by working on hands-on projects and exploring modern web development tools
-            and technologies. <span className="text-foreground">alive</span>.
+            With over a year of experience as a full-stack developer, I’ve built and shipped
+            real-world projects that put usability, performance, and clean architecture first. My
+            day-to-day centers on React, TypeScript, and modern backend technologies, and I take
+            pride in writing code that’s readable, well-tested, and easy to maintain. I care deeply
+            about performance, accessibility, and the small details that make a product feel
+            polished.
           </p>
           <p>
             When I’m not coding, I like exploring design ideas, reading about modern UI/UX patterns,
