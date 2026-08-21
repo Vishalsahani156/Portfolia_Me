@@ -31,6 +31,20 @@ const projects = [
     tags: ["React", "Node.js", "TypeScript", "Python"],
     gradient: "from-green-500/30 to-teal-500/30",
   },
+  {
+    title: "ModelsVerse",
+    description:
+      "A web platform for showcasing and exploring 3D models and creative portfolios. Features an interactive gallery, smooth animations, and a responsive layout, built with a focus on performance, clean UI, and an immersive browsing experience.",
+    tags: ["React", "TypeScript", "Tailwind", "Three.js"],
+    gradient: "from-fuchsia-500/30 to-orange-500/30",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "A modern, fully responsive developer portfolio built with React, TypeScript, and Framer Motion. Designed with a polished dark UI, fluid animations, and reusable components to present projects, skills, and experience in a clean, professional way.",
+    tags: ["React", "TypeScript", "Tailwind", "Framer Motion"],
+    gradient: "from-cyan-500/30 to-blue-500/30",
+  },
 ];
 
 export function Projects() {
