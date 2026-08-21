@@ -55,9 +55,10 @@ export function Contact() {
               <a
                 key={i}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="grid h-10 w-10 place-items-center rounded-full bg-white/[0.04] hover:bg-white/[0.08] hover:scale-110 transition-all"
               >
-                //fix now
                 <Icon size={16} />
               </a>
             ))}
