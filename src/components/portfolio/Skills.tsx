@@ -14,6 +14,21 @@ const groups = [
     title: "Tools & DX",
     items: ["Git", "Docker", "Vite", "Vercel", "Linear"],
   },
+  {
+    title: "DevOps & Cloud",
+    items: [
+      "AWS EC2",
+      "AWS ECS",
+      "AWS ECR",
+      "Docker",
+      "Jenkins",
+      "CI/CD",
+      "RabbitMQ",
+      "Redis",
+      "Microservices",
+      "Linux",
+    ],
+  },
 ];
 
 export function Skills() {

@@ -107,6 +107,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href:
+          "data:image/svg+xml," +
+          encodeURIComponent(
+            '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#0a0e14"/><text x="16" y="22" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#2dd4bf" text-anchor="middle">VS</text></svg>',
+          ),
+      },
     ],
   }),
   shellComponent: RootShell,
