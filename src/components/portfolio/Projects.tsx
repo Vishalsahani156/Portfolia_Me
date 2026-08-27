@@ -2,7 +2,17 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Github } from "lucide-react";
 import { Section } from "./Section";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  gradient: string;
+  live?: string;
+  github?: string;
+  image?: string;
+};
+
+const projects: Project[] = [
   {
     title: "Finance Tracker",
     description:
@@ -16,6 +26,8 @@ const projects = [
       "A real-time communication platform with AI-assisted chat features. Built for fast messaging, live updates, and smooth user interaction with a focus on performance and scalability.",
     tags: ["React", "Node.js", "Socket.io", "AI"],
     gradient: "from-indigo-500/30 to-pink-500/30",
+    live: "https://chatboat.vishalsahani.in/",
+    image: "/projects/chatboard.png",
   },
   {
     title: "System Configuration Checker",
@@ -72,25 +84,44 @@ export function Projects() {
             <div
               className={`relative aspect-[16/10] rounded-2xl bg-gradient-to-br ${p.gradient} overflow-hidden`}
             >
-              <div className="absolute inset-0 grid-bg opacity-40" />
-              <div className="absolute inset-0 grid place-items-center">
-                <span className="font-display text-3xl md:text-4xl font-bold text-white/90 drop-shadow-lg">
-                  {p.title}
-                </span>
-              </div>
+              {p.image ? (
+                <img
+                  src={p.image}
+                  alt={`${p.title} preview`}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover object-top"
+                />
+              ) : (
+                <>
+                  <div className="absolute inset-0 grid-bg opacity-40" />
+                  <div className="absolute inset-0 grid place-items-center">
+                    <span className="font-display text-3xl md:text-4xl font-bold text-white/90 drop-shadow-lg">
+                      {p.title}
+                    </span>
+                  </div>
+                </>
+              )}
               <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all">
-                <a
-                  href="#"
-                  className="grid h-9 w-9 place-items-center rounded-full glass-strong hover:bg-white/10"
-                >
-                  <Github size={14} />
-                </a>
-                <a
-                  href="#"
-                  className="grid h-9 w-9 place-items-center rounded-full glass-strong hover:bg-white/10"
-                >
-                  <ArrowUpRight size={14} />
-                </a>
+                {p.github && (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="grid h-9 w-9 place-items-center rounded-full glass-strong hover:bg-white/10"
+                  >
+                    <Github size={14} />
+                  </a>
+                )}
+                {p.live && (
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="grid h-9 w-9 place-items-center rounded-full glass-strong hover:bg-white/10"
+                  >
+                    <ArrowUpRight size={14} />
+                  </a>
+                )}
               </div>
             </div>
             <div className="p-5">
