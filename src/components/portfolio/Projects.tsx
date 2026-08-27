@@ -53,6 +53,15 @@ const projects: Project[] = [
     image: "/projects/modelverse.png",
   },
   {
+    title: "Phone Number Generator",
+    description:
+      "A universal phone number generator supporting 30 countries with configurable export options. Runs generation jobs in the background with real-time progress, custom columns, and CSV, XLSX, or PDF downloads.",
+    tags: ["React", "TypeScript", "Node.js", "Tailwind"],
+    gradient: "from-blue-600/30 to-indigo-500/30",
+    live: "https://universelnum.vishalsahani.in/",
+    image: "/projects/phonegen.png",
+  },
+  {
     title: "Portfolio Website",
     description:
       "A modern, fully responsive developer portfolio built with React, TypeScript, and Framer Motion. Designed with a polished dark UI, fluid animations, and reusable components to present projects, skills, and experience in a clean, professional way.",

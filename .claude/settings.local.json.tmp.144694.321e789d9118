@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(chmod 644 public/projects/modelverse.png)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m 'feat: add ModelVerse project live link and screenshot *)",
+      "Bash(git push *)",
+      "Bash(cp /home/vishal/.claude/image-cache/5d0f690b-afac-4d7a-bd97-ff6989931d06/3.png /home/vishal/Portfolia_Me/public/projects/phonegen.png)",
+      "Bash(chmod 644 /home/vishal/Portfolia_Me/public/projects/phonegen.png)",
+      "Bash(git commit -q -m 'feat: add Phone Number Generator project with live link and screenshot *)"
+    ]
+  }
+}
