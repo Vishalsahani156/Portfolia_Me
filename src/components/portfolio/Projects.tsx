@@ -44,11 +44,13 @@ const projects: Project[] = [
     gradient: "from-green-500/30 to-teal-500/30",
   },
   {
-    title: "ModelsVerse",
+    title: "ModelVerse",
     description:
-      "A web platform for showcasing and exploring 3D models and creative portfolios. Features an interactive gallery, smooth animations, and a responsive layout, built with a focus on performance, clean UI, and an immersive browsing experience.",
-    tags: ["React", "TypeScript", "Tailwind", "Three.js"],
+      "A premium platform connecting models, creators, and brands. Features talent discovery, portfolios, casting applications, messaging, and a personalized dashboard — built with a polished, responsive UI for a smooth browsing and hiring experience.",
+    tags: ["React", "TypeScript", "Tailwind", "Node.js"],
     gradient: "from-fuchsia-500/30 to-orange-500/30",
+    live: "https://www.vishalsahani.in/",
+    image: "/projects/modelverse.png",
   },
   {
     title: "Portfolio Website",
