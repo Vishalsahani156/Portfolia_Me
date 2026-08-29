@@ -1,15 +1,38 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Github, Linkedin, Mail, Send, Twitter } from "lucide-react";
+import { toast } from "sonner";
 import { Section } from "./Section";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
+    const form = e.currentTarget;
+    setSending(true);
+    const formData = new FormData(form);
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
+    formData.set("subject", `Portfolio contact: ${formData.get("subject") || ""}`);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        form.reset();
+        setSent(true);
+        setTimeout(() => setSent(false), 4000);
+      } else {
+        toast.error("Something went wrong. Please email me directly.");
+      }
+    } catch {
+      toast.error("Network error. Please email me directly.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -73,6 +96,8 @@ export function Contact() {
           onSubmit={onSubmit}
           className="lg:col-span-3 glass rounded-2xl p-8 space-y-4"
         >
+          {/* Honeypot: bots that tick this are silently dropped by Web3Forms */}
+          <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
           <div className="grid sm:grid-cols-2 gap-4">
             <Field label="Name" id="name" placeholder="Your name" />
             <Field label="Email" id="email" type="email" placeholder="you@example.com" />
@@ -87,6 +112,7 @@ export function Contact() {
             </label>
             <textarea
               id="message"
+              name="message"
               rows={5}
               required
               placeholder="Tell me a little about your project..."
@@ -95,9 +121,10 @@ export function Contact() {
           </div>
           <button
             type="submit"
-            className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:shadow-[var(--shadow-glow)] hover:-translate-y-0.5 transition-all"
+            disabled={sending}
+            className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:shadow-[var(--shadow-glow)] hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:pointer-events-none"
           >
-            {sent ? "Message sent ✓" : "Send message"}
+            {sending ? "Sending..." : sent ? "Message sent ✓" : "Send message"}
             <Send size={14} className="group-hover:translate-x-0.5 transition-transform" />
           </button>
         </motion.form>
@@ -127,6 +154,7 @@ function Field({
       </label>
       <input
         id={id}
+        name={id}
         type={type}
         required
         placeholder={placeholder}
